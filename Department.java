@@ -17,7 +17,7 @@ public abstract class Department {
         this.numEmployees = numEmployees;
     }
 
-    public void printIsOpen(List<Department> depts, LocalDateTime today) {
+    public static void printIsOpen(List<Department> depts, LocalDateTime today) {
         // cycle thorugh each department in provided list
         for (Department d : depts) {
             // Print out name of Dept and return if that department is opent today
