@@ -30,3 +30,8 @@ Starting w/ Vehicles
 -Object Hierarchy
     -"Gen-Spec" (Generalized-Specialized) / "is-a" relationship
     - Find common abstractions and model those in our base class the having specialized classes 
+
+Things we learned today
+-Enumerations
+-instanceof Keyword
+-How to work with a mulitfile Java program in VS Code

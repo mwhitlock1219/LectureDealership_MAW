@@ -16,7 +16,7 @@ public class Dealership {
         depts.add(sd);
         depts.add(fd);
         depts.add(sales);
-
+        // Print out if depts are open
         Department.printIsOpen(depts, LocalDateTime.now());
     }
 
