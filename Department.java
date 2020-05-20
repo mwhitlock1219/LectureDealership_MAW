@@ -1,6 +1,7 @@
 package LectureDealership;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public abstract class Department {
     private String deptName;
@@ -14,6 +15,14 @@ public abstract class Department {
     public Department(String name, int numEmployees) {
         this.deptName = name;
         this.numEmployees = numEmployees;
+    }
+
+    public void printIsOpen(List<Department> depts, LocalDateTime today) {
+        // cycle thorugh each department in provided list
+        for (Department d : depts) {
+            // Print out name of Dept and return if that department is opent today
+            System.out.println(d.toString() + " is open today?" + d.isOpenToday(today));
+        }
     }
 
     public abstract boolean isOpenToday(LocalDateTime day);
