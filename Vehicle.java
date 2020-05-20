@@ -6,10 +6,11 @@ public class Vehicle {
     private String VIN, make, model, color;
     private double wholesaleCost, retailPrice;
     private int modelYear;
+    private VehicleClassification vehicleClass;
 
     // Constructor with properties
     public Vehicle(String VIN, double wholesaleCost, double retailPrice, int modelYear, String make, String model,
-            String color) {
+            String color, VehicleClassification vehicleClass) {
         this.VIN = VIN;
         this.wholesaleCost = wholesaleCost;
         this.retailPrice = retailPrice;
@@ -48,6 +49,10 @@ public class Vehicle {
         return color;
     }
 
+    public VehicleClassification getVehicleClass() {
+        return vehicleClass;
+    }
+
     // Setters
     public void setVin(String VIN) {
         this.VIN = VIN;
@@ -77,6 +82,10 @@ public class Vehicle {
         this.color = color;
     }
 
+    public void setVehicleClass(VehicleClassification vehicleClass) {
+        this.vehicleClass = vehicleClass;
+    }
+
     @Override // Annotation telling us and compiler that we are overriding previously defined
               // behavior
     public String toString() {
@@ -84,7 +93,7 @@ public class Vehicle {
     }
 
     public double getTargetMargin() {
-        return this.retailPrice- this.wholesaleCost;
+        return this.retailPrice - this.wholesaleCost;
     }
 
 }

@@ -6,8 +6,8 @@ public class LightTruck extends Vehicle {
 
     // Contructor with both inherited properties (Vehicle) and new properties.
     public LightTruck(String VIN, double wholesaleCost, double retailPrice, int modelYear, String make, String model,
-            String color, long towingCapacity, long truckWeight, boolean is4wd) {
-        super(VIN, wholesaleCost, retailPrice, modelYear, make, model, color);
+            String color, VehicleClassification vehicleClass, long towingCapacity, long truckWeight, boolean is4wd) {
+        super(VIN, wholesaleCost, retailPrice, modelYear, make, model, color, vehicleClass);
 
         this.towingCapacity = towingCapacity;
         this.truckWeight = truckWeight;
