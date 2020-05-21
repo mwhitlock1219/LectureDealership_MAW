@@ -3,7 +3,6 @@ package LectureDealership;
 // Convention dictates that "imlements" come after "extends" if present
 //classes can implement multiple interfaces but only can extend one class
 public class Car extends Vehicle implements Leaseable, Discountable {
-
     // Simple contructor inheriting all the methods an properties of Vehicle
     public Car(String VIN, double wholesaleCost, double retailPrice, int modelYear, String make, String model,
             String color, VehicleClassification vehicleClass) {

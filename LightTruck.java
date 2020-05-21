@@ -4,37 +4,55 @@ public class LightTruck extends Vehicle {
     private long towingCapacity, grossCombinedWeight, truckWeight;
     private boolean is4wd;
 
-    // Contructor with both inherited properties (Vehicle) and new properties.
+    // Constructor with both inherited properties and new properites
     public LightTruck(String VIN, double wholesaleCost, double retailPrice, int modelYear, String make, String model,
-            String color, VehicleClassification vehicleClass, long towingCapacity, long truckWeight, boolean is4wd) {
+            String color, long towingCapacity, long truckWeight, boolean is4wd, VehicleClassification vehicleClass) {
         super(VIN, wholesaleCost, retailPrice, modelYear, make, model, color, vehicleClass);
-
         this.towingCapacity = towingCapacity;
         this.truckWeight = truckWeight;
         this.is4wd = is4wd;
         this.grossCombinedWeight = this.towingCapacity + this.truckWeight;
 
         if (this.is4wd == true) {
+            // Create new TransferCase object if LightTruck is 4WD
+            // and store object in variable xferCase
             this.xferCase = new TransferCase();
         }
     }
 
     // Getters
+    public long getTowingCapacity() {
+        return this.towingCapacity;
+    }
+
+    public long getTruckWeight() {
+        return this.truckWeight;
+    }
+
+    public long getGrossCombinedWeight() {
+        return this.grossCombinedWeight;
+    }
+
+    public boolean getIs4wd() {
+        return this.is4wd;
+    }
+
+    // Setters
     public void setTowingCapacity(long towingCapacity) {
         this.towingCapacity = towingCapacity;
     }
 
-    public void setTruckWeight(long truckWeight) {
-        this.truckWeight = truckWeight;
+    public void setTruckWeight(long weight) {
+        this.truckWeight = weight;
     }
 
-    // Method to automatically calculate GCW if no parameters are given.
-    public void setGrossCominedWeight() {
+    // Method to automatically calculate GCW if no params given
+    public void setGrossCombinedWeight() {
         this.grossCombinedWeight = this.truckWeight + this.towingCapacity;
     }
 
-    // Method to Override to manually set GCW if parameters are given.
-    public void setGrossCominedWeight(long weight) {
+    // Method Overload to manually set GCW if param is provided
+    public void setGrossCombinedWeight(long weight) {
         this.grossCombinedWeight = weight;
     }
 
@@ -44,20 +62,19 @@ public class LightTruck extends Vehicle {
 
     @Override
     public String toString() {
-        // Get the string output fromour "default" superclass method
-        // example : 2018 Kia Sorrento
+        // Get the string output from our "default" superclass method
+        // Example: 2018 Kia Sorrento
         // and store that in a variable for us to use
         String str = super.toString();
         // If 4WD, signify that in return string
         if (is4wd) {
-            str += ", (4 WD)"; // appends string to the end of our str variable
+            str += ", (4 WD)"; // appends string to end of our str variable
         }
         return str;
-
     }
 
     public class TransferCase {
-        public int numGears;
+        private int numGears;
 
         public TransferCase() {
             this.numGears = 4;
@@ -70,8 +87,8 @@ public class LightTruck extends Vehicle {
         public int getNumGears() {
             return this.numGears;
         }
+
     }
 
     public TransferCase xferCase;
-
 }
