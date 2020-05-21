@@ -23,7 +23,7 @@ public class Car extends Vehicle implements Leaseable, Discountable {
         return true;
     }
 
-    public in getLeaseTerm() {
+    public int getLeaseTerm() {
         return 24;
     }
 
