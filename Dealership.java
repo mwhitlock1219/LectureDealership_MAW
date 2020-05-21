@@ -28,13 +28,18 @@ public class Dealership {
         // FinanceDepartment fd = new FinanceDepartment();
         // SalesDepartment sales = new SalesDepartment();
 
-        // // Add out depts to a list
-        // List<Department> depts = new ArrayList<>();
-        // depts.add(sd);
-        // depts.add(fd);
-        // depts.add(sales);
-        // // Print out if depts are open
-        // Department.printIsOpen(depts, LocalDateTime.now());
+        // Have Factory create new departments for us
+        Department sd = DepartmentFactory.CreateDepartment(DepartmentNames.SERVICE);
+        Department fd = DepartmentFactory.CreateDepartment(DepartmentNames.FINANCE);
+        Department sales = DepartmentFactory.CreateDepartment(DepartmentNames.SALES);
+
+        // Add out depts to a list
+        List<Department> depts = new ArrayList<>();
+        depts.add(sd);
+        depts.add(fd);
+        depts.add(sales);
+        // Print out if depts are open
+        Department.printIsOpen(depts, LocalDateTime.now());
     }
 
 }
