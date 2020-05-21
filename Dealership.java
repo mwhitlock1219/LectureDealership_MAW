@@ -13,6 +13,8 @@ public class Dealership {
             int gears = lt.xferCase.getNumGears();
             System.out.println("Number of Gears: " + gears);
         }
+
+        lt.printVehicleType();
         // Leaseable lease = new Car("52430899FD", 33000.00, 42000.00, 2019,
         // "Chevrolet", "Impala", "White",
         // VehicleClassification.NEW);

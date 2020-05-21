@@ -96,4 +96,31 @@ public class Vehicle {
         return this.retailPrice - this.wholesaleCost;
     }
 
+    public void printVehicleType() {
+        String type = "NOT SET";
+        switch (this.vehicleClass) {
+            case NEW:
+                type = "New Vehicle";
+                break;
+            case USED:
+                type = "Used Vehicle";
+                break;
+            case OFF_LEASE:
+                type = "Leased Vehicle";
+                break;
+            case SHUTTLE:
+                type = "Dealer Shuttle";
+                break;
+            case LOANER:
+                type = "Dealer Service Runner";
+                break;
+            case PARTS_RUNNER:
+                type = "Parts Runner";
+                break;
+            default:
+                break;
+        }
+        System.out.println("this car type is : " + type);
+    }
+
 }
