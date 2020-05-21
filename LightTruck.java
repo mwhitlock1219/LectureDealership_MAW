@@ -13,6 +13,10 @@ public class LightTruck extends Vehicle {
         this.truckWeight = truckWeight;
         this.is4wd = is4wd;
         this.grossCombinedWeight = this.towingCapacity + this.truckWeight;
+
+        if (this.is4wd == true) {
+            this.xferCase = new TransferCase();
+        }
     }
 
     // Getters
@@ -51,5 +55,23 @@ public class LightTruck extends Vehicle {
         return str;
 
     }
+
+    public class TransferCase {
+        public int numGears;
+
+        public TransferCase() {
+            this.numGears = 4;
+        }
+
+        public TransferCase(int gears) {
+            this.numGears = gears;
+        }
+
+        public int getNumGears() {
+            return this.numGears;
+        }
+    }
+
+    public TransferCase xferCase;
 
 }
