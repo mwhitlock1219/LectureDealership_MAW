@@ -17,6 +17,7 @@ public class Car extends Vehicle implements Leaseable, Discountable {
         // same as == .getRetailPrice() - this.getWholesaleCost() - 1000;
     }
 
+    // Implementing methods from ILeaseable
     @Override
     public boolean isLeaseable() {
         return true;

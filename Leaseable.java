@@ -7,4 +7,8 @@ interface Leaseable {
     int getLeaseTerm();
 
     int getMaxMilesPerYear();
+
+    default float getMileablePenalty() {
+        return 500.0f;
+    }
 }
