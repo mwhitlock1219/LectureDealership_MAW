@@ -39,7 +39,12 @@
 
   - **abstraction** and **insulation**
 
---
+## New Stuff we covered today
+
+1. Factory Pattern (and abstraction)
+2. Implementing multiple Interfaces
+3. Generic class (focus on generic elements)
+4. Composing objects at another objects creation
 
 ## When to use abstract classes, generic classes and interfaces
 
