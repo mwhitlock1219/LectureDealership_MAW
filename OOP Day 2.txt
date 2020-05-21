@@ -32,6 +32,7 @@ Starting w/ Vehicles
     - Find common abstractions and model those in our base class the having specialized classes 
 
 Things we learned today
--Enumerations
--instanceof Keyword
--How to work with a mulitfile Java program in VS Code
+1. Enumerations
+2. instanceof Keyword
+3. How to work with a mulitfile Java program in VS Code
+4. Brief into to annotations, mainly @Override
