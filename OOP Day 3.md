@@ -36,4 +36,29 @@
 - using a Factory insulates the consumer from the actual class implementation
 
 * Why is this important? Why use a factory instead of relying on the new Keyword?
+
   - **abstraction** and **insulation**
+
+--
+
+## When to use abstract classes, generic classes and interfaces
+
+#### Abstract Classes
+
+A blueprint to use for something else
+
+- Do you need both abstract and non-abstract methods?
+- Are you okay with class being able to only implement one of you?
+- Do you expressly need to add new functionality or do you need some other stuff too?
+
+#### Interface
+
+Added functionality to something athat already exists
+
+- Do you only need non-abstract methods?
+- Are you easily named as an adjective? (has -ible or -able at the end)
+- Can you be paired with other interfaces and work together to add more functionality?
+
+#### Generic Class
+
+- Do you need to work with multiple data types or object types?
