@@ -23,3 +23,14 @@
 - <E> for elements, <T> for data types, <K> for key, <V> for values
 - we can "bound" our generics to specific user-generate objects/type by using the "extends" keyword
   - example: <E extends Vehicle>
+
+## OOP Design Patterns
+
+- Sounds really intimidating, but its not
+- A convention so well recognized that it has a name and when someone calls a pattern by its name, everyone knows what they're talking about
+
+## Factory Pattern
+
+- A method for creating objects without exposing the logic needed for creation
+- SUPER common pattern in OOP
+- using a Factory insulates the consumer from the actual class implementation
